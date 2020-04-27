@@ -1,0 +1,29 @@
+.contentReps {
+  min-height: 100vh;
+  text-align: center;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.inptField{
+  margin: 5px;
+  text-align: center;
+}
+
+.genBtn{
+  border-radius: 6px;
+  padding: 8px 20px;
+  display: block;
+  margin: 0 auto;
+  background-color: green;
+  color: white;
+}
+
+.downloadBtn{
+  border-radius: 6px;
+  padding: 8px 20px;
+  display: block;
+  margin: 0 auto;
+  background-color: blue;
+  color: white;
+}

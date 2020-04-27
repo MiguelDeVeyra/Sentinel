@@ -1,0 +1,100 @@
+{% extends 'sentinel/base.html' %}
+{% load static %}
+{% block title %}Sentinel · Notifications{% endblock title %}
+
+{% block body %}
+<div class="wrapper d-flex align-items-stretch">
+  <nav id="sidebar">
+    <div class="p-4 pt-5">
+      <h3 id="sidebarTitle"><span> <b>SENTINEL</b> </span> </h3>
+      <ul class="list-unstyled components mb-5">
+        <li>
+          <a href="{% url 'sentinel:home' %}">Live Feed</a>
+        </li>
+        <li>
+          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Reports</a>
+          <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li>
+                <a href="{% url 'sentinel:generalReports' %}">General Reports</a>
+            </li>
+            <li>
+                <a href="{% url 'sentinel:incidentList' %}">Incident Reports</a>
+            </li>
+          </ul>
+        </li>
+        <li class="active">
+          <a href="{% url 'sentinel:notifications' %}">Notifications</a>
+        </li>
+      </ul>
+      <div class="footer">
+        <p>SENTINEL</p>
+      </div>
+
+    </div>
+  </nav>
+
+        <!-- Page navbar  -->
+      <div id="content" class="p-4 p-md-3">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+          </div>
+        </nav>
+
+        <!-- [Page Content]-->
+        <div class="notifsContainer">
+          <h3>Alerts and Notifications</h3>
+
+          <div class="card border-danger">
+            <div class="card-header">
+              Intruder Alert!
+            </div>
+            <div class="card-body">
+              <h4 class="tileHeader">DATE AND TIME</h4>
+              <img class="tileImg" src="{% static 'images/person.png' %}" alt="" width="80" height="80">
+            </div>
+          </div>
+        </div><br>
+        <!-- Access Request -->
+
+        <!-- Intruder alert-->
+        <div class="notifsContainer">
+          <div class="card">
+            <div class="card-header">
+              Access Request
+            </div>
+            <div class="card-body">
+              <img class="requestorImg" src="{% static 'images/person.png' %}" alt="" width="80" height="80">
+              <p class="requestorRsn"><b>Reason:</b> Investigating for stolen underwear</p>
+              <button class="AcceptBtn px-2" type="button" name="button">Accept</button>
+              <button class="DenyBtn px-2" type="button" name="button">Deny</button>
+            </div>
+            <div class="card-footer text-muted">
+              <span> <b>Name: Miguel de Veyra</b> </span> / date and time
+            </div>
+          </div>
+        </div><br>
+        <!-- User Warning -->
+        <div class="notifsContainer">
+          <div class="card border-warning">
+            <div class="card-header">
+              Access Request
+            </div>
+            <div class="card-body">
+              <img class="requestorImg" src="{% static 'images/person.png' %}" alt="" width="80" height="80">
+              <p class="requestorRsn"><b>Reason:</b> underwear found!</p>
+            </div>
+            <div class="card-footer text-muted">
+              <span> <b>Name: Miguel de Veyra</b> </span> / date and time
+            </div>
+          </div>
+        </div><br>
+
+      </div>
+		</div>
+{% endblock body %}

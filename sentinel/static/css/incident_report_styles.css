@@ -1,0 +1,13 @@
+.incidentClip{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.downloadBtn{
+  border-radius: 6px;
+  padding: 8px 20px;
+  display: block;
+  margin: 0 auto;
+  background-color: blue;
+  color: white;
+}

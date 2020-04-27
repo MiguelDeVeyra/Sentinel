@@ -1,0 +1,19 @@
+.deleteButton{
+  background-color: #f44336;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  color: #FFFF;
+}
+
+.viewButton{
+  background-color: #008CBA;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  color: #FFFF;
+}
+
+.InciListTitle{
+  text-align: center;
+}

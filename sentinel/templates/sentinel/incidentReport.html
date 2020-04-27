@@ -1,0 +1,110 @@
+{% extends 'sentinel/base.html' %}
+{% load static %}
+{% block title %}Sentinel · IncidentReport{% endblock title %}
+
+{% block body %}
+		<div class="wrapper d-flex align-items-stretch">
+      <nav id="sidebar">
+        <div class="p-4 pt-5">
+          <h3 id="sidebarTitle"><span> <b>SENTINEL</b> </span> </h3>
+          <ul class="list-unstyled components mb-5">
+            <li>
+              <a href="{% url 'sentinel:home' %}">Live Feed</a>
+            </li>
+	          <li class="active">
+	            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Reports</a>
+	            <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li>
+                    <a href="{% url 'sentinel:generalReports' %}">General Reports</a>
+                </li>
+                <li class="active">
+                    <a href="{% url 'sentinel:incidentList' %}">Incident Reports</a>
+                </li>
+	            </ul>
+	          </li>
+            <li>
+              <a href="{% url 'sentinel:notifications' %}">Notifications</a>
+            </li>
+          </ul>
+          <div class="footer">
+            <p>SENTINEL</p>
+          </div>
+
+        </div>
+      </nav>
+
+        <!-- Page navbar  -->
+      <div id="content" class="p-4 p-md-3">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+          </div>
+        </nav>
+
+        <!-- [Page Content]-->
+        <div class="mb-1">
+          <div class="pageTitle">
+            <h4 class="mb-2">Incident Report</h4>
+          </div>
+          <!-- CLIP -->
+          <div class="container incidentClip">
+            <video c width="100%" height="100%" controls>
+              <source src="https://www.youtube.com/watch?v=rTj4vUgyGxM&t=5s" type="video/mp4">
+            </video><br>
+            <!-- INTRUDERS -->
+            <div class="intruderFaces">
+              <div class="card">
+                <div class="card-header">
+                  <h5>INTRUDERS</h5>
+                </div>
+                <div class="card-body">
+                  <img src="{% static 'images/person.png' %}" alt="" height="180" width="180">
+                  <img src="{% static 'images/person.png' %}" alt="" height="180" width="180">
+                  <img src="{% static 'images/person.png' %}" alt="" height="180" width="180">
+                </div>
+              </div>
+            </div>
+            <!-- Time in and time out-->
+            <div class="card">
+              <div class="card-header">
+                <h5>Time in - Time out</h5>
+              </div>
+              <div class="card-body">
+                TIME HERE
+              </div>
+            </div>
+            <!-- Action taken -->
+            <div class="card">
+              <div class="card-header">
+                <h5>Action Taken</h5>
+              </div>
+              <div class="card-body">
+                <p>TEXT HERE</p>
+              </div>
+            </div>
+            <!-- Remarks -->
+            <div class="card">
+              <div class="card-header">
+                <h5>Remarks</h5>
+              </div>
+              <div class="card-body">
+                <p>TEXT HERE</p>
+              </div>
+            </div>
+
+            <!-- DOWNLOAD -->
+            <div class="pt-3">
+              <button class="downloadBtn" type="button" class="btn btn-info">DOWNLOAD</button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+		</div>
+{% endblock body %}

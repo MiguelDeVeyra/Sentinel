@@ -1,0 +1,80 @@
+{% extends 'sentinel/base.html' %}
+{% block title %}Sentinel · IncidentList{% endblock title %}
+
+{% block body %}
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="p-4 pt-5">
+		  		<h3 id="sidebarTitle"><span> <b>SENTINEL</b> </span> </h3>
+	        <ul class="list-unstyled components mb-5">
+            <li>
+              <a href="{% url 'sentinel:home' %}">Live Feed</a>
+            </li>
+	          <li class="active">
+	            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Reports</a>
+	            <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li>
+                    <a href="{% url 'sentinel:generalReports' %}">General Reports</a>
+                </li>
+                <li class="active">
+                    <a href="{% url 'sentinel:incidentList' %}">Incident Reports</a>
+                </li>
+	            </ul>
+	          </li>
+            <li>
+              <a href="{% url 'sentinel:notifications' %}">Notifications</a>
+            </li>
+	        </ul>
+	        <div class="footer">
+            <p>SENTINEL</p>
+	        </div>
+
+	      </div>
+    	</nav>
+
+        <!-- Page navbar  -->
+      <div id="content" class="p-4 p-md-3">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+          </div>
+        </nav>
+
+        <!-- [Page Content]-->
+        <!-- NOTE SHOULD WE DIFFERECNIATE IF A INCIDENT LIST IS EITHER USER SNET OR AN INTRUDER ALERT -->
+        <h3 class="InciListTitle">INCIDENT LIST</h3>
+        <table class="table table-striped table-dark">
+          <thead>
+            <tr>
+              <th scope="col">Date and time</th>
+              <th scope="col">Delete</th>
+              <th scope="col">View</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">dd/mm/yyyy</th>
+              <td> <button type="button" class="deleteButton">DELETE</button> </td>
+              <td> <a href="{% url 'sentinel:incidentReport' %}"><button type="button" class="viewButton">VIEW</button> </td></a>
+            </tr>
+            <tr>
+              <th scope="row">dd/mm/yyyy</th>
+              <td> <button type="button" class="deleteButton">DELETE</button> </td>
+              <td> <a href="{% url 'sentinel:incidentReport' %}"><button type="button" class="viewButton">VIEW</button> </td></a>
+            </tr>
+            <tr>
+              <th scope="row">dd/mm/yyyy</th>
+              <td> <button type="button" class="deleteButton">DELETE</button> </td>
+              <td> <a href="{% url 'sentinel:incidentReport' %}"><button type="button" class="viewButton">VIEW</button> </td></a>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+		</div>
+{% endblock body %}

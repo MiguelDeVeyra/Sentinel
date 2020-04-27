@@ -1,0 +1,119 @@
+{% extends 'sentinel/base.html' %}
+{% block title %}Sentinel · GeneralReports{% endblock title %}
+
+{% block body %}
+	<div class="wrapper d-flex align-items-stretch">
+		<nav id="sidebar">
+			<div class="p-4 pt-5">
+	  		<h3 id="sidebarTitle"><span> <b>SENTINEL</b> </span> </h3>
+        <ul class="list-unstyled components mb-5">
+          <li>
+            <a href="{% url 'sentinel:home' %}">Live Feed</a>
+          </li>
+
+          <li class="active">
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Reports</a>
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+              <li class="active">
+                  <a href="{% url 'sentinel:generalReports' %}">General Reports</a>
+              </li>
+              <li>
+                  <a href="{% url 'sentinel:incidentList' %}">Incident Reports</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="{% url 'sentinel:notifications' %}">Notifications</a>
+          </li>
+        </ul>
+
+        <div class="footer">
+          <p>SENTINEL</p>
+        </div>
+
+      </div>
+  	</nav>
+
+    <!-- Page navbar  -->
+    <div id="content" class="p-4 p-md-3">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+          <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Toggle Menu</span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="contentReps">
+        <div class="container">
+            <h4 class="text-dark pb-1">General Report</h4>
+            <hr>
+    <div class="card text-center text-dark">
+      <!-- DATE INPUT -->
+      <div class="card-header">
+        <h6>Input date</h6>
+      </div>
+      <div class="card-body inptField align">
+        <label for="genFrm">From: </label>
+        <input type="date" name="genFrm" value="">
+        <label for="genTo">To: </label>
+        <input type="date" name="genTo" value=""><br>
+        <div class="pt-3">
+            <button class="genBtn" type="button" name="button">Generate</button>
+        </div>
+      </div>
+    </div><br>
+    <!-- GRAPH -->
+    <div class="card text-dark">
+      <div class="card-header">
+        Graph
+      </div>
+      <div class="card-body">
+				{% autoescape off %}
+			  {{ plot_div }}
+			  {% endautoescape %}
+      </div>
+    </div>
+    <!-- LIST OF PEOPLE WHO ACCESSED THE ROOM -->
+    <hr style="color:white;">
+    <div class="table-responsive mb-1">
+      <table class="table table-bordered text-center">
+        <thead class="thead-dark">
+          <tr>
+            <th colspan="5" class="align-middle">LIST OF PEOPLE WHO ACCESSED THE ROOM</th>
+          </tr>
+        </thead>
+        <thead class="thead-light">
+          <tr>
+            <!--th scope="col" class="align-middle">Image</th-->
+            <th scope="col" class="align-middle">Name</th>
+            <!--th scope="col" class="align-middle">ID</th-->
+            <th scope="col" class="align-middle">No. of entry</th>
+            <th scope="col" class="align-middle">Time of last access</th>
+          </tr>
+        </thead>
+        <tbody class="bg-light">
+          <tr>
+            <!--td class="align-middle"><img src="main/images/user.png" alt="Intruder Image" class="img-fluid rounded" height="60" width="60"></td-->
+            <td class="align-middle">Ernest Fernandez</td>
+            <!--td class="align-middle">201701058</td-->
+            <td class="align-middle">10</td>
+            <td class="align-middle">10:00 AM - 10:05 AM<br/>17/11/2019</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- DOWNLOAD -->
+    <div class="text-center mb-4">
+      <button class="downloadBtn" type="button" class="btn btn-info">DOWNLOAD</button>
+    </div>
+  </div>
+
+
+    </div>
+	</div>
+{% endblock body %}

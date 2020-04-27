@@ -1,0 +1,19 @@
+.button {
+  border-radius: 8px;
+  padding: 12px 28px;
+  display: block;
+  margin: 0 auto;
+  background-color: #f44336;
+  text-decoration-color: white;
+  color: white;
+}
+
+.video{
+  height: 100%;
+  width: 100%;
+}
+
+.contentIndex {
+  margin: auto;
+  padding-top: 50px;
+}

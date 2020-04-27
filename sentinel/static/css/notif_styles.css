@@ -1,0 +1,49 @@
+.notifsContainer{
+  text-align: center;
+}
+
+.tileHeader{
+  float: left;
+  margin-top: 20px;
+  margin-left: 80px;
+}
+
+.tileImg{
+  float: right;
+  margin-top:10px;
+  margin-right: 200px;
+}
+
+.requestorImg{
+  float: left;
+  margin-left: 80px;
+}
+
+.requestorRsn{
+  float: left;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.AcceptBtn{
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-right: 200px;
+  float: right;
+  background-color: #4CAF50;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  color: #FFFF;
+}
+
+.DenyBtn{
+  margin-top: 10px;
+  margin-right: 10px;
+  float: right;
+  background-color: #f44336;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  color: #FFFF;
+}

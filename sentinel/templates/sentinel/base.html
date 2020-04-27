@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{% block title %}{% endblock title %}</title>
+
+  <link rel="icon" href="{% static 'images/eye.png' %}" type="image/x-icon">
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/index_styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/incident_styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/gen_reports_styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/incident_report_styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/log_in.css' %}">
+  <link rel="stylesheet" href="{% static 'css/notif_styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/sidebar_extra_styles.css' %}">
+</head>
+<body>
+    {% block body %}{% endblock body %}
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
